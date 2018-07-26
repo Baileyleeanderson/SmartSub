@@ -1,0 +1,45 @@
+.main{
+    width: 100%;
+    height:auto;
+    text-align: center;
+}
+.allvids{
+    display: inline-block;
+}
+h6{
+    text-align:center;
+    
+}
+
+#bttn{
+    display: block;
+    margin-left: 1%;
+    margin-bottom: 10px;
+    background-color: rgb(209, 209, 209);
+    border-radius: 20%;
+    border: 1px solid;
+    padding: 4px;
+    box-shadow: 2px 2px #b5b5b5;
+    text-align: center;
+    display:inline-block;
+}
+h2{
+    text-align:center;
+}
+.nav{
+    text-align: left;
+}
+.nav_h{
+    margin: auto;
+    margin-bottom: 44px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(65, 205, 205);
+    height: 130%;
+    font-size: 24px;
+    padding: 10px;
+    border: black 1px solid;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 10%;
+    box-shadow: 3px 3px #878787;
+}

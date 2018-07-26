@@ -1,0 +1,14 @@
+
+<div class="main">
+  <h2>Film | Video-Editing</h2>
+  <div class="nav">
+    <button [routerLink]="['/user', user._id]"class="nav_h">My Profile</button>
+    <button (click)="logout()" class="nav_h">Logout</button>
+  </div>  
+  <div class="allvids" *ngFor="let vid of videos">
+      <h6>{{vid.title}}</h6>
+      <button id="bttn" [routerLink]="['/user', vid.user_id]">@{{vid.username}}</button>
+      <iframe  width="400" height="220" [src]="getSanitizeUrl(vid.url)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <!-- <button *ngIf="notSubscribed" (click)="subscribeVid(vid.user_id)" id="bttn">Subscribe to @{{vid.username}}</button> -->
+  </div> 
+</div>

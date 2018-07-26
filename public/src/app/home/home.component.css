@@ -1,0 +1,54 @@
+.main{
+    margin-top: 20px;
+    background-image: url('assets/bgnew.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1200px;
+    background-attachment: fixed;
+    background-position: contain;
+    
+}
+.errors{
+    margin-left:31px; 
+}
+.forms{
+    margin-left: 10px;
+    display: inline-block;
+    
+}
+#wrap{
+    margin-left: 20px;
+    margin-top: 25px;
+    display: inline-block;
+}
+#text{
+    display: inline-block;
+    margin-left: 283px;
+
+}
+#header{
+    text-align: center;
+    position: relative;
+    bottom: 800px;
+    right: 18px;
+}
+#login{
+    text-align: center;
+    margin-right: 25px;
+    display: inline-block;
+    
+}
+#regbutton{
+    text-align: center;
+    margin-left: 40px;
+    display: inline-block;
+}
+#smartsub{
+    width: 601px;
+    display: inline-block;
+    margin-left: 30.9%;
+    margin-top: 3.5%;
+    height: 353px;
+    background-attachment: fixed;
+}
+

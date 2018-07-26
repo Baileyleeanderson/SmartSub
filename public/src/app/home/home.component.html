@@ -1,0 +1,58 @@
+<div class="main">
+  <div id="wrap">
+    <div id="login">
+      <button (click)="showForm()" id="logbutton" type="button" class="btn btn-outline-secondary" >Register</button>
+    </div>
+    <div id="regbutton">
+      <button (click)="showLogin()" type="button" class="btn btn-outline-secondary">Login</button>
+    </div>
+  </div>
+  <!--________________________________________header -->
+  <h2 id="text">Learn. Teach. Subscribe.</h2>
+  <div class="errors" *ngFor="let e of errors">
+      {{e}}
+  </div>
+
+  <!-- _______________________________________registration -->
+  <div  class="forms" class="col-md-4">
+    <form (submit)="register()" id="formreg" *ngIf="formReg">
+        <div class="col-md-6 mb-6">
+          <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Email" name="user.email" [(ngModel)]="user.email" >
+        </div>
+        <div class="col-md-6 mb-6">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend3">@</span>
+            </div>
+            <input type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="Username(one word)" aria-describedby="inputGroupPrepend3" name="user.username" [(ngModel)]="user.username" required >
+          </div>
+        </div>
+        <div class="col-md-6 mb-6">
+          <div class="input-group">
+            <input type="password" class="form-control is-invalid" id="validationServerPassword" placeholder="Password" aria-describedby="inputGroupPrepend3" name="user.password" [(ngModel)]="user.password" required minlength="8" >
+          </div>
+        </div>
+        <div class="col-md-6 mb-6">
+          <div class="input-group">
+            <input type="password" class="form-control is-invalid" id="validationServerConfirm" placeholder="Confirm Password" aria-describedby="inputGroupPrepend3" name="user.pwconf" [(ngModel)]="user.pwconf" required minlength="8" >
+          </div>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+
+  <!-- _________________________________________login -->
+    <form (submit)="loginUser()" id="formlog" *ngIf="formLog">
+        <div class="col-md-6 mb-6">
+          <label for="validationServer02">Email</label>
+          <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Email" name="login.email" [(ngModel)]="login.email" required>
+        </div>
+        <div class="col-md-6 mb-6">
+          <label for="validationServerPassword">Password</label>
+          <div class="input-group">
+            <input type="password" class="form-control is-invalid" id="validationServerPassword" placeholder="Password" aria-describedby="inputGroupPrepend3" required name="login.password" [(ngModel)]="login.password">
+          </div>
+        </div>
+      <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+</div>
+</div>

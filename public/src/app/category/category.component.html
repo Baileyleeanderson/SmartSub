@@ -1,0 +1,94 @@
+<div class="main">
+  <div class="pics">
+    <img id="{{compcss}}" [routerLink]="['/computer_programming']" (mouseenter)="compShow()" (mouseleave)="compLeave()" src="assets/images/game.png">
+    <img id="{{musiccss}}" [routerLink]="['/music']" (mouseenter)="musicShow()"  id="music" src="assets/images/music-icon.png" (mouseleave)="musicLeave()">
+    <img id="{{videocss}}" [routerLink]="['/film']" (mouseenter)="videoShow()"  id="video" src="assets/images/video.png" (mouseleave)="videoLeave()">
+    <img id="{{designcss}}" [routerLink]="['/design']" (mouseenter)="designShow()"  id="design" src="assets/images/design.png" (mouseleave)="designLeave()">
+  </div>
+<!--_______________________________computer_programming -->
+  <div *ngIf="comp || music || video || design" class="contbg">
+    <div class="contents">
+      <h1 *ngIf="comp">Computer Programming</h1>
+      <img *ngIf="comp" [routerLink]="['/computer_programming']" class="imghover" src="assets/images/programer.jpeg" (mouseenter)="comp_one()" (mouseleave)="comp_oneLeave()">
+      <img *ngIf="comp" class="imghover" [routerLink]="['/computer_programming']" src="assets/images/programer1.jpg" (mouseenter)="comp_two()" (mouseleave)="comp_twoLeave()">
+      <img *ngIf="comp" class="imghover" [routerLink]="['/computer_programming']" src="assets/images/programer2.jpeg" (mouseenter)="comp_three()" (mouseleave)="comp_threeLeave()">
+      <h4 *ngIf="comp">
+        Watch in-depth tutorial videos and learn<br>
+        computer programming.  Find Solutions<br>
+        to problems and expand your knowledge in <br>
+        computer languages.</h4>
+      <img class="img2" *ngIf="comp" src="https://cdn-images-1.medium.com/max/1600/1*XzK7XPYkM2le0dgoKqxtjA.jpeg">
+
+<!--_________________________________music_production -->
+      <h1 *ngIf="music">Music Production/Editing</h1>
+      <img *ngIf="music" class="imghover" [routerLink]="['/music']" src="assets/images/record.jpg" (mouseenter)="music_one()" (mouseleave)="music_oneLeave()">
+      <img *ngIf="music" class="imghover" [routerLink]="['/music']" src="assets/images/record2.jpg" (mouseenter)="music_two()" (mouseleave)="music_twoLeave()">
+      <img *ngIf="music" class="imghover" [routerLink]="['/music']" src="assets/images/record3.jpg" (mouseenter)="music_three()" (mouseleave)="music_threeLeave()">
+      <h4 *ngIf="music">
+        Find great tutorials on music production,<br>
+        audio-engineering, and mixing. Search videos<br>
+        and learn how to make your music sound just<br>
+        like the professionials.</h4>
+      <img class="img2" *ngIf="music" src="http://musinetstudio.com/img/ableton-live-img-arrangement.jpg">
+
+<!--_________________________________video_editing -->      
+      <h1 *ngIf="video">Video Editing</h1>
+      <img *ngIf="video" class="imghover" [routerLink]="['/film']" src="assets/images/video2.jpg" (mouseenter)="video_one()" (mouseleave)="video_oneLeave()">
+      <img *ngIf="video" class="imghover" [routerLink]="['/film']" src="assets/images/video3.jpeg" (mouseenter)="video_two()" (mouseleave)="video_twoLeave()">
+      <img *ngIf="video" class="imghover" [routerLink]="['/film']" src="assets/images/video4.jpg" (mouseenter)="video_three()" (mouseleave)="video_threeLeave()">
+      <h4 *ngIf="video">
+        Learn about different video editing programs<br>
+        and how to create amazing edits, music<br>
+        vidoes, films, and animations!<br></h4>
+      <img class="img2" *ngIf="video" src="https://ecs7.tokopedia.net/img/product-1/2016/8/2/808473/808473_5383dd1e-a3a0-45f7-989a-d838d639e58e.jpg">
+
+<!--_________________________________design_animation -->
+      <h1 *ngIf="design">Design/Animation </h1>
+      <img *ngIf="design" class="imghover" [routerLink]="['/design']" src="assets/images/design1.png" (mouseenter)="design_one()" (mouseleave)="design_oneLeave()">
+      <img *ngIf="design" class="imghover" [routerLink]="['/design']" src="assets/images/design2.jpeg" (mouseenter)="design_two()" (mouseleave)="design_twoLeave()">
+      <img *ngIf="design" class="imghover" [routerLink]="['/design']" src="assets/images/design3.jpeg" (mouseenter)="design_three()" (mouseleave)="design_threeLeave()">
+      <h4 *ngIf="design">
+          Find great tutorials using amazing design<br>
+          software such as, photoshop, illustrator,<br>
+          after-effects and many more!<br></h4>
+      <img class="img2" *ngIf="design" src="http://cdn2.expertreviews.co.uk/sites/expertreviews/files/3/99//affinity_designer_screenshot_1.png?itok=RPyOiqqw">
+    </div>
+  </div>
+    <div class="textstuff">
+      <div class="nav">
+          <button [routerLink]="['/user', user._id]"class="nav_h">My Profile</button>
+          <button (click)="logout()" class="nav_h">Logout</button>
+      </div>
+<!--_________________________________hover_contents -->  
+      <div id="box2">
+        <!--_________________________comp_programming -->  
+        <h4 *ngIf="c_one">Whether you're a beginner or a professional programmer, find tutorials on your favorite language.</h4>
+        <h4 *ngIf="c_two">Find in-depth videos helping you solve complex problems in your code.</h4>
+        <h4 *ngIf="c_three">Expand your knowledge and learn from other professional developers in the industry.</h4>
+        <!--_________________________music_production --> 
+        <h4 *ngIf="m_one">Learn how to create music and get professional sounding quality.</h4>
+        <h4 *ngIf="m_two">Learn how to Record, Mix, and Master industry quality music.</h4>
+        <h4 *ngIf="m_three">Delve deep into the world of music production and learn how to create catchy melodies and radio ready music.</h4>
+        <!--_________________________video_editing --> 
+        <h4 *ngIf="v_one">Find amazing tips film-editing and cinemaphotography. Learn from professionals pick their brain.</h4>
+        <h4 *ngIf="v_two">Browse videos and find the video-editing software that is right for you. Study from other professionals in the industry.</h4>
+        <h4 *ngIf="v_three">Learn advanced techniques in your favorite editing-software from industry professionals.</h4>
+        <!--_________________________design_animation --> 
+        <h4 *ngIf="d_one">Learn incredibley powerful design/ animation software and learn how to bring your art to life.</h4>
+        <h4 *ngIf="d_two">Discover unique tips/tricks from professionals in the graphic design industry.</h4>
+        <h4 *ngIf="d_three">Learn everything from photo-editing to cartoon animation through in-depth tutorials.</h4>
+      </div>
+      <h5>Technology is the Future!</h5>
+      <h6>Share your knowledge and talents with the world.</h6>
+      <h6>Learn from others who share your passion. And </h6>
+      <h6>Most importantly, keep the world creative! Smart-</h6><br>
+      <h5>Sub is a free learning platform! Here, anyone can </h5>
+      <h6>upload tutorial videos using the programs they</h6>
+      <h6>love. Whether you're a web-developer, graphic</h6>
+      <h6>designer, music producer, film-editor, or just</h6>
+      <h6>have a talent for any software, then Smart-Sub </h6>
+      <h6>is the community for you!</h6>
+      <div id="box">
+      </div>
+    </div>
+</div>

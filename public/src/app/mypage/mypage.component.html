@@ -1,0 +1,76 @@
+<div id="main">
+  <div class="nav">
+    <button (click)="logout()" class="nav_h">Logout</button>
+  </div> 
+
+  <!--____________________________user_profile -->
+  <div class="profile">
+      <h3 id="header">@{{user.username}}</h3>
+    <div id="userpic">
+      <img id="profilepic" src='{{user.profile}}'>
+    </div>
+    <div>
+    <button *ngIf="picbttn" class="buttn1"(click)='showPicForm()'>Upload Pic</button>
+      
+    <!--____________________________picture -->
+      <form class="picsubmit" *ngIf="picForm" (submit)="changePhoto()">
+        <input type="text" name="img.img" [(ngModel)]="img.img" placeholder="Enter image url">
+        <input class="buttn1" type="submit" value="Upload">
+      </form>
+    </div>
+
+    <!--____________________________bio -->
+    <div *ngIf="notBio">
+      <form class="bioSubmit" (submit)="createBio()">
+          <textarea aria-label="With textarea" placeholder="Enter a detailed bio about yourself, the software you know and love to use, and where you learned the software. (If your self taught please include in bio! Some of the best teachers are self taught!)" name="bio.bio" [(ngModel)]="bio.bio"></textarea>
+          <input class="buttn" type="submit" value="Submit Bio">
+      </form>
+    </div>
+    <div class="bio" *ngIf="bioTrue">
+      <h6 id="textbio" *ngIf="biotext" >{{user.bio}}</h6>
+      <label *ngIf="picbttn && bioTrue" (click)="showEditBio()" >Edit Bio</label>
+      <img id="{{imgcolor}}" (mouseenter)="changecolor()" (mouseleave)="changecolor2()" *ngIf="notsubbed && notuser && bioTrue" src="./../assets/images/smartsub.png" (click)="subscribeVid(user._id)" (click)="hidePic()">
+      <h5 *ngIf="hover">Subscribe to @{{user.username}}</h5>
+      
+      <h5 *ngIf="userIsSubscribed">You Are Subscribed to @{{user.username}}</h5>
+      <div *ngIf="showBio">
+        <form class="bioSubmit" (submit)="createBio()">
+            <textarea aria-label="With textarea" name="bio.bio" [(ngModel)]="bio.bio">{{bio.bio}}</textarea>
+            <input class="buttn" type="submit" value="Submit Bio">
+        </form>
+      </div>
+  <!--____________________________upload_video -->
+      <div *ngIf="vidUpload" class="video_form">
+          <form id="vidform" (submit)="uploadVideo()">
+            <h5>Upload a Video</h5>
+            <select class="form-control" name="video.category" form="vidform" [(ngModel)]="video.category">
+              <option value="programming" selected="true" >Programming</option>
+              <option value="music">Music</option>
+              <option value="film">Film</option>
+              <option value="design">Design</option>
+            </select>
+            <input type="text" name="video.title" [(ngModel)]="video.title" placeholder="Enter a Title">
+            <input type="text" name="video.url" [(ngModel)]="video.url" placeholder="Enter Youtube URL">
+            <input class="buttn" type="submit" value="Upload">
+          </form>
+      </div>
+    </div>
+    <!--____________________________subscriptions -->
+    <div id="main_sub_div">
+    <h5 id="following">Subscriptions:</h5>
+      <div  class="subdiv" *ngFor="let x of allsubs">
+          <h6>@{{x.username}}</h6>
+          <img [routerLink]="['/user', x._id]" id="subpic" src='{{x.profile}}'>
+          <label class="unsub" *ngIf="picbttn" (click)="unsubscribe(x._id)">unsubscribe</label>
+      </div>
+    </div>
+  </div>
+  <!--____________________________user_tutorials -->
+  <div class="all_vids">
+    <h5 id='vidheader'>@{{user.username}} Tutorials</h5>
+        <div class="showvid" *ngFor="let vid of user.videos">
+            <h6>{{vid.title}}  |  {{vid.category}}  <label *ngIf="picbttn" (click)="deleteVid(vid._id)">(Delete)</label></h6>
+               <iframe  width="400" height="220" [src]="getSanitizeUrl(vid.url)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+        </div>
+  </div>
+</div>

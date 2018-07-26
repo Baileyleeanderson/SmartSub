@@ -1,0 +1,176 @@
+#main{
+    margin-top: 20px;
+    height: 1200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('assets/bg2.jpg');
+    background-attachment: fixed;
+    background-position: contain;
+    opacity: 0.9;
+}
+.nav{
+    text-align:right;
+}
+.unsub{
+    display: block;
+    text-align: center;
+}
+.nav_h{
+    margin: auto;
+    margin-left: 1460px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(65, 205, 205);
+    height: 130%;
+    font-size: 24px;
+    padding: 10px;
+    border: black 1px solid;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 10%;
+    box-shadow: 3px 3px #878787;
+}
+#header{
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 33px;
+    border-radius: 10%;
+    vertical-align: top;
+    
+}
+#vidheader{
+    text-align: center;
+    margin: auto;
+}
+.all_vids{
+    margin-left: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    width: 51%;
+    height: 100%;
+    vertical-align: top;
+    
+}
+.profile{
+    margin-left: 100px;
+    margin-top: 20px;
+    display: inline-block;
+    border: 1px solid black;
+    width: 600px;
+    height: auto;
+    vertical-align: top;
+    margin-top: 20px;
+    overflow: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-attachment: fixed;
+    background-position: contain;
+}
+#vidform{
+    margin-left: 46px;
+    margin-bottom: 37px;
+    width: 128%;
+}
+#userpic{
+    width: 147px;
+    height: 147px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: contain;
+    display: inline-block;
+}
+#profilepic{
+    width: 145px;
+    height: 145px;
+    border: black 1px solid;
+    margin-left: 220px;
+}
+#main_sub_div{
+    background: rgb(231, 231, 231);
+    border: solid black .5px;
+    margin-left: 7px;
+    margin-top: 22px;
+}
+#textbio{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 5px;
+    border-radius: 3%;
+}
+img{
+    width: 60%;
+    height: 80%;
+    border-radius: 10%;
+}
+#subclick2{
+    border: rgb(0, 255, 255) 3px double;
+    width: 85%;
+    height: 95%;
+    border-radius: 30%;
+}
+#subpic{
+    width: 175px;
+    height: 175px;
+    margin-bottom: 10px;
+}
+.buttn1{
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 255px;
+    background-color: rgb(30, 177, 200);
+    border-radius: 10%;
+    vertical-align: top;
+}
+.buttn{
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 11px;
+    background-color: rgb(30, 177, 200);
+    border-radius: 10%;
+    vertical-align: top;
+}
+
+.picsubmit{
+    margin-top: 10px;
+}
+#following{
+    text-align: center;
+}
+.subdiv{
+    margin-left: 10px;
+    display: inline-block;
+}
+textarea{
+    margin-top: 10px;
+    width: 80%;
+    height: 90px; 
+}
+.bio{
+    text-align: center;
+    margin-top: 20px;
+    text-overflow: inherit;
+}
+.video_form{
+    width: 61%; 
+    margin-left: 20px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgb(27, 26, 26);
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: rgb(27, 26, 26);
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: rgb(27, 26, 26);
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: rgb(27, 26, 26);
+}
+.video_textarea{
+    width: 100%;
+}
+.showvid{
+    display:inline-block;
+    text-align: center;
+    margin: 10px;
+}
