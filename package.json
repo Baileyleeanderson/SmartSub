@@ -21,6 +21,9 @@
     "css-loader": "^0.28.11",
     "extract-loader": "^2.0.1",
     "file-loader": "^1.1.11",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.16.4",
     "youtube-video-js": "^1.6.2"
   }
 }
