@@ -3,7 +3,7 @@ var path = require("path");
 var mongoose = require('mongoose');
 var app = express();
 var bodyparser = require("body-parser");
-const bcrypt = require('bcrypt-as-promised');
+const bcrypt = require('bcrypt');
 var session = require('express-session');
 mongoose.Promise = global.Promise;
 
@@ -25,3 +25,5 @@ app.all("*", (req,res,next) => {
 app.listen(8082, function(){
     console.log("listening to port 8082");
 });
+
+
